@@ -1,0 +1,34 @@
+create table Member(
+memberId int not null,
+memberName varchar(30) not null,
+streetNo  varchar(10) not null,
+streetName  varchar(30) not null,
+city  varchar(30) not null,
+district  varchar(30) not null,
+pincode  int not null,
+country  varchar(30) not null,
+membertype varchar(10) not null,
+primary key(memberId)
+);	
+create table Book(
+BookId varchar(20) not null,
+BookGroupId int not null,
+BookName varchar(30) not null,
+ISBNNo  varchar(20) not null,
+author  varchar(30) not null,
+category  varchar(30) not null,
+status  varchar(30) not null,
+primary key(BookId)
+);		
+create table IssuedBooks(
+BookId varchar(20) not null,
+MemberId int not null,
+Borrowdate date not null,
+returndate  date not null,
+duedate  date not null,
+primary key(BookId)
+);	
+select * from MEMBER;
+select * from ISSUEDBOOKS;
+Insert into ISSUEDBOOKS values('111_1',102,'2022-04-04','2022-04-14','2022-04-14');
+select * from BOOK;
